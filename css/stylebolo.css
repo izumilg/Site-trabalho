@@ -1,24 +1,26 @@
-p {
-    font-size: 15px;
+@font-face {
+    font-family: 'Brittany';
+    src: url('fonts/Brittany.ttf');
 }
-h1 {
-    font-size: 60px;
-    margin: 0;
+.navbar {
+    background-color: #d1b586;
 }
-h2 {
-    font-size: 30px;
-    margin: 0;
-}
-section {
-    background-color: bisque;
+footer{
+    background-color: #d1b586;
 }
 body {
-    margin: 0;
-    padding: 0;
+    background-color: #fffaf1;
+    font-family: 'Times New Roman', Times, serif;
 }
-a:hover{
-    color: rgb(52, 0, 100);
+.nome-empresa{
+    font-size: 50px;
+    font-family: 'Brittany', sans-serif;
+    color: #fffaf1;
 }
-a{
-    color: blue;
+a.btn:hover {
+    background-color: #25D366;
+    color: white;
+}
+.titulo-borda {
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.35);
 }

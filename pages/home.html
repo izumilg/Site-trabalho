@@ -1,53 +1,177 @@
-<!DOCTYPE html>
-<html lang="PT-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Fabrica Encantada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../css/stylehome.css">
-    <title>Doces Artesanais</title>
-</head>
-<body>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand nome-empresa" href="#">
+                 Fábrica Encantada
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">
+                            A Fábrica
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="bolos.html">
+                            Bolos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="avaliacao.html">
+                            Avaliações
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
 
     
-    <center>
-        <section><h1>Doces Artesanais</h1>
-        <p>Bem-vindo à nossa loja Fábrica encantada ! </p>
-        <a href="home.html">A Fabrica</a> <a href="bolos.html">Bolos</a> <a href="sobre.html">Sobre</a> <a href="avaliacao.html"> Avaliações </a>
-        </section></center>
 
-
-<div>
-    <center>
-        <h2>Nossos Bolos</h2>
-        <img src="../img/3bc2ba62-63fb-4d9e-9828-a10c044813f2.jfif" width="200px"><br>
-        
-        <hr>
-
-        <br>
-        <h2>Nossos Doces</h2>
-         <img src="../img/c6c653f1-50c4-4f2d-867f-4d0723f1215d.jfif" width="100px"><br>
-        
-    </center>
+  <div class="text-center my-3">
+    <h4 class="fw-bold titulo-encantado">Sabor Encantado</h4>
 </div>
+<!-- Carrosel -->
+    <div class="container-fluid p-2 mt-4" style="background-color:#a18452; border-radius:20px; overflow:hidden;">
+      <div class="row align-items-center">
 
-<hr>
+        <div class="col-md-6 central-esquerda">
+          <h2>Fábrica Encantada</h2>
+          <p>Os melhores bolos artesanais da cidade</p>
+          <a href="https://api.whatsapp.com/send/?phone=5511999999999"
+          target="_blank"
+          class="btn text-white mt-3"
+          style="background-color:#c38b2d; border-color:#c38b2d;">
+          <i class="bi bi-whatsapp me-2 titulo-borda"></i>
+          Fazer pedido no WhatsApp
+          </a>
+      </div>
 
-<div>
-    <h2>📋 Sabores disponíveis: </h2>
-    <ul>
-        <li>Chocolate</li>
-        <li>Morango</li>
-        <li>Baunilha</li>
-    </ul>
-</div>
+        <div class="col-md-6">
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+          <img src="../img/0279405e-9272-4489-bd15-0b710ead9743.jfif" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+          <img src="../img/1ebddefd-621b-4f17-ad66-82b7b02feefd.jfif" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+          <img src="../img/411f9de8-254b-41b2-bc60-20c57a3f2d4d.jfif" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
 
-<hr>
+      </div>
+    </div>
 
-<div>  
-    <h2>📞 Contato:</h2>
-    <p>Telefone: não sei</p>
-    <p>Email: </p>
-    <p>Localização: Chafic Faccury 4109</p>
-</div>
-</body>
+    <!-- Cards -->
+    <div class="container mt-5">
+      <div class="row g-3 justify-content-center">
+          <div class="col-md-4">
+              <div class="card h-100">
+                <img src="img/unnamed.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card 1</h5>
+                  <p class="card-text">Descrição simples</p>
+                  <a href="bolos.html" class="btn btn-primary titulo-borda">Ver mais </a>
+                </div>
+              </div>
+          </div>
+      
+          <div class="col-md-4">
+              <div class="card h-100">
+                <img src="img/bela-paisagem-natural-ao-ar-livre-de-mar-e-praia-com-palmeira-de-coco_74190-8417.avif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card 2</h5>
+                  <p class="card-text">Outro exemplo de conteudo </p>
+                  <a href="bolos.html" class="btn btn-primary titulo-borda">Ver mais</a>
+                </div>
+              </div>
+          </div>
+      
+          <div class="col-md-4">
+              <div class="card h-100">
+                <img src="img/6326651-tropical-praia-sundown-horizonte-paisagem-vetor.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card 3</h5>
+                  <p class="card-text">Mais um card bootstrap</p>
+                  <a href="bolos.html" class="btn btn-primary titulo-borda">Ver mais </a>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    
+<footer class="text-white text-center p-4 mt-5">
+
+        <h2>
+            📞 Contato
+        </h2>
+
+        <p>
+            Telefone: (11) 99999-9999
+        </p>
+
+        <p>
+            Email: fabricaencantada@gmail.com
+        </p>
+
+        <p>
+            Localização: Chafic Faccury 4109
+        </p>
+
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
 </html>

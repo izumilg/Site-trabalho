@@ -1,24 +1,44 @@
-a:hover{
-    color: rgb(52, 0, 100);
+@font-face {
+    font-family: 'Brittany';
+    src: url('fonts/Brittany.ttf');
 }
-a{
-    color: blue;
+.carousel-item img{
+    height: 400px;
+    object-fit: cover;
 }
-section {
-    background-color: bisque;
+.navbar {
+    background-color: #d1b586;
 }
-body{
-    padding: 0;
-    margin: 0;
+footer{
+    background-color: #d1b586;
 }
-p {
-    font-size: 20px;
+body {
+    background-color: #fffaf1;
+    font-family: 'Times New Roman', Times, serif;
 }
-h1 {
-    font-size: 60px;
-    margin: 0;
+.carousel {
+    border-radius: 20px;
+    overflow: hidden;
 }
-h2 {
-    font-size: 30px;
-    
+.titulo-encantado {
+    font-family: 'Brittany', sans-serif;
+    font-size: 50px;
+    color: #d1b586;
+}
+.nome-empresa{
+    font-size: 50px;
+    font-family: 'Brittany', sans-serif;
+    color: #fffaf1;
+}
+
+.titulo-borda {
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.35);
+}
+.central-esquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
 }
