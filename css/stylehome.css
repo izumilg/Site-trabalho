@@ -97,13 +97,10 @@ body {
     font-family: 'Brittany', cursive;
     font-size: 4rem;
     color: #d8b98a;
-    
     text-shadow:
-        0 2px 4px rgba(0,0,0,0.15),
-        0 0 12px rgba(216,185,138,0.35);
-
+    0 2px 4px rgba(0,0,0,0.15),
+    0 0 12px rgba(216,185,138,0.35);
     letter-spacing: 1px;
-
     transition: 0.3s ease;
 }
 .btn-wpp {
