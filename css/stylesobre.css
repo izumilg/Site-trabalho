@@ -105,6 +105,11 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .sobre-titulo {
@@ -113,6 +118,11 @@ body {
     color: #4b2e1f;
     margin-bottom: 30px;
     line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .sobre-texto {
@@ -152,4 +162,9 @@ body {
     font-weight: 700;
     color: #4b2e1f;
     margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
