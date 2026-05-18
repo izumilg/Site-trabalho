@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Define a codificação de caracteres como UTF-8 para garantir que caracteres especiais sejam exibidos corretamente -->
+  <meta charset="UTF-8">
+  
+  <!-- Define o título da página que aparece na aba do navegador -->
+  <title>Dados Recebidos</title>
+
+  <script>
+    // Função para extrair parâmetros da URL e exibi-los na página
+    function obterParametros() {
+    
+      // Cria um objeto URLSearchParams que vai nos permitir manipular os parâmetros da URL
+      const params = new URLSearchParams(window.location.search);
+
+      // Seleciona o elemento com o ID "dados" e insere nele o conteúdo formatado com os dados da URL
+      document.getElementById("dados").innerHTML = `
+        <!-- Exibe o valor do parâmetro "nome" da URL -->
+        <p><strong>Nome:</strong> ${params.get("nome")}</p>
+        
+        <!-- Exibe o valor do parâmetro "idade" da URL -->
+        <p><strong>Idade:</strong> ${params.get("idade")}</p>
+        
+        <!-- Exibe o valor do parâmetro "escolaridade" da URL -->
+        <p><strong>Escolaridade:</strong> ${params.get("escolaridade")}</p>
+        
+        <!-- Exibe o valor do parâmetro "fumante" da URL -->
+        <p><strong>Fumante:</strong> ${params.get("fumante")}</p>
+        
+        <!-- Exibe o valor do parâmetro "preferencias" da URL -->
+        <p><strong>Preferências:</strong> ${params.get("preferencias")}</p>
+      `;
+    }
+
+    // A função 'obterParametros' é executada automaticamente assim que a página for carregada
+    window.onload = obterParametros;
+  </script>
+</head>
+<body>
+  <!-- Cabeçalho da página -->
+  <h2>Dados Recebidos:</h2>
+
+  <!-- Este é o elemento onde os dados extraídos da URL serão exibidos -->
+  <div id="dados">
+    <!-- Os dados extraídos da URL serão inseridos aqui pelo JavaScript -->
+  </div>
+</body>
+</html>

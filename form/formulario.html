@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário Simples</title>
+  <script>
+    // Função chamada ao enviar o formulário
+    function validarFormulario(event) {
+    
+      // Previne o envio automático do formulário, para poder validar os dados primeiro
+      event.preventDefault();
+
+      // Captura os valores dos campos do formulário
+      let nome = document.forms["meuFormulario"]["nome"].value;
+      let idade = document.forms["meuFormulario"]["idade"].value;
+      let escolaridade = document.forms["meuFormulario"]["escolaridade"].value;
+      let fumante = document.querySelector('input[name="fumante"]:checked');  // Seleciona a opção de fumante marcada
+      let preferencias = document.querySelectorAll('input[name="preferencias"]:checked');  // Seleciona as preferências marcadas
+
+      // Validação simples: checa se algum campo está vazio ou se não foi escolhido uma opção de fumante ou preferências
+      if (nome === "" || idade === "" || escolaridade === "" || !fumante || preferencias.length === 0) {
+        alert("Por favor, preencha todos os campos.");
+        return false; // Impede o envio do formulário
+      }
+
+      // Se todos os dados estiverem preenchidos corretamente, cria uma lista com as preferências selecionadas
+      let preferenciasSelecionadas = [];
+      
+      preferencias.forEach(function(p) {
+        preferenciasSelecionadas.push(p.value);  // Adiciona o valor de cada preferência selecionada na lista
+      });
+
+      // Monta a URL com os parâmetros (dados do formulário), usando encodeURIComponent para garantir que os dados sejam seguros para URL
+      let url = `receber.html?nome=${encodeURIComponent(nome)}&idade=${encodeURIComponent(idade)}&escolaridade=${encodeURIComponent(escolaridade)}&fumante=${encodeURIComponent(fumante.value)}&preferencias=${encodeURIComponent(preferenciasSelecionadas.join(", "))}`;
+
+      // Redireciona o usuário para a página 'receber.html', passando os dados na URL
+      window.location.href = url;
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Formulário de Cadastro</h2>
+  <!-- Formulário que chama a função 'validarFormulario' ao ser enviado -->
+  <form name="meuFormulario" onsubmit="validarFormulario(event)">
+    <!-- Campo Nome -->
+    Nome: <input type="text" name="nome"><br><br>
+
+    <!-- Campo Idade -->
+    Idade: <input type="number" name="idade"><br><br>
+
+    <!-- Campo Escolaridade com Combobox (caixa de seleção) -->
+    Escolaridade:
+    <select name="escolaridade">
+      <option value="">Selecione</option>
+      <option value="Fundamental">Fundamental</option>
+      <option value="Médio">Médio</option>
+      <option value="Superior">Superior</option>
+    </select><br><br>
+
+    <!-- Campo Fumante com Radio buttons -->
+    Fumante:
+    <input type="radio" name="fumante" value="Sim"> Sim
+    <input type="radio" name="fumante" value="Não"> Não<br><br>
+
+    <!-- Preferências com Checkbox -->
+    Preferências:<br>
+    <input type="checkbox" name="preferencias" value="Esporte"> Esporte<br>
+    <input type="checkbox" name="preferencias" value="Música"> Música<br>
+    <input type="checkbox" name="preferencias" value="Leitura"> Leitura<br><br>
+
+    <!-- Botão Submit -->
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>

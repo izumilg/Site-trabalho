@@ -89,3 +89,57 @@ body {
     background-color: #fdfaf5;
     font-family: 'Times New Roman', Times, serif;
 }
+.form-check-input :hover{
+    color: #c38b2d;
+    background-color: #5a3923;
+}
+
+ .rating {
+    float:left;
+    border:none;
+}
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0, 0, 0, 0);
+}
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+}
+.rating:not(:checked) > label:before {
+    content:'★ ';
+}
+.rating > input:checked ~ label {
+    color: #c0892d;
+}
+.rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label {
+    color: #d3b789;
+}
+.rating > input:checked + label:hover, .rating > input:checked + label:hover ~ label, .rating > input:checked ~ label:hover, .rating > input:checked ~ label:hover ~ label, .rating > label:hover ~ input:checked ~ label {
+    color: #d3b789;
+}
+.rating > label:active {
+    position:relative;
+}
+.btn-primary:hover {
+  color: black;
+  background-color:#d3b789;
+  border-color: #d3b789;
+}
+.btn-primary {
+    color: white;
+    background-color: #c0892d;
+    border-color: #c0892d;
+}
+.card-img {
+    width: 90px;
+    height: 90px;
+}
